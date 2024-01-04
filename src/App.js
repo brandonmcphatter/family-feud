@@ -8,10 +8,11 @@ import HomeScreen from "./components/HomeScreen";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import SetupScreen from "./components/SetupScreen";
 import GameBoard from "./components/GameBoard";
+import AnswerBoard from "./components/AnswerBoard";
 
 export default function App() {
 
-    const {show, handleShow, team1, team2} = useGame();
+    const {show, handleShow} = useGame();
 
     return (
         <BrowserRouter>
@@ -25,13 +26,13 @@ export default function App() {
                         {show && <TeamNameWindow/>}
                     </HomeScreen>
                 }/>
-                <Route path='/setup' element={<SetupScreen/>}/>
-                <Route path='/game' element={<h1>Game - team1: {team1} team2: {team2} </h1>}>
-                    <Route path='board' element={<GameBoard/>}/>
+                <Route path='setup' element={<SetupScreen/>}/>
+                <Route path='game' element={<GameBoard/>}/>
+                    <Route path='board' element={<AnswerBoard/>}/>
                     <Route path='fast-money1' element={<h1>Fast Money</h1>}/>
                     <Route path='fast-money2' element={<h1>Fast Money</h1>}/>
                     <Route path='final' element={<h1>Final</h1>}/>
-                </Route>
+
 
             </Routes>
 
