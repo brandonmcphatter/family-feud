@@ -2,8 +2,10 @@ import Answer from "./Answer";
 import {useGame} from "../context/GameContext";
 
 
-function TopAnswers() {
+function TopAnswers({rd}) {
     const {gameData} = useGame();
+    const round1Answers = gameData[rd].answers;
+    const round1Points = gameData[rd].points;
 
     return (
         <div className='d-grid w-75'>
