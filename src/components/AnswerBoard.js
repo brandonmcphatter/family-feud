@@ -13,7 +13,7 @@ function AnswerBoard() {
             <RoundScore/>
             <div className='d-flex justify-content-between align-content-center'>
                 <TeamScore teamScore={t1Score} setScore={setT1Score} roundScore={roundScore}/>
-                <TopAnswers/>
+                <TopAnswers rd={0}/>
                 <TeamScore teamScore={t2Score} setScore={setT2Score} roundScore={roundScore}/>
             </div>
             <RoundQuestion/>
