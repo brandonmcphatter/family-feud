@@ -6,7 +6,7 @@ function ActionBar() {
 
 
     return (
-        <div className='actionBar mt-1 d-flex justify-content-center align-items-center'>
+        <div className='actionBar  d-flex justify-content-center align-items-center'>
             <div className='col-3 d-flex justify-content-center align-items-center'>
                 <button className='btn btn-primary btn-lg' onClick={showQuestion}>Start Round</button>
             </div>
