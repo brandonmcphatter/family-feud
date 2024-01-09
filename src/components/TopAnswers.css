@@ -1,0 +1,36 @@
+.top-answers {
+    border: #e7a13a 15px solid;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    height: 55vh;
+    width: 61vw;
+    padding: 10px 10px ;
+}
+
+.answer-area{
+
+}
+.first-col {
+padding-right: 1px;
+}
+
+.second-col {
+padding-left: 1px;
+}
+
+.hidden-answer{
+    background-color: deepskyblue;
+    height: 12vh;
+    width: 29vw;
+    border: 10px solid white;
+    cursor: pointer;
+}
+
+.answer {
+border-right: 1px solid white;
+}
+
+.points {
+border-left: 1px solid white;
+}
+
