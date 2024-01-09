@@ -1,35 +1,28 @@
-import Answer from "./Answer";
-import {useGame} from "../context/GameContext";
+import './TopAnswers.css';
+import HiddenAnswer from "./HiddenAnswer";
 
 
 function TopAnswers({rd}) {
-    const {gameData} = useGame();
-    const round1Answers = gameData[rd].answers;
-    const round1Points = gameData[rd].points;
+    // const {gameData} = useGame();
+    // const round1Answers = gameData[rd].answers;
+    // const round1Points = gameData[rd].points;
 
     return (
-        <div className='d-grid w-75'>
-
-            <div className='row'>
-                <Answer answer={gameData[0].answers[0].answer} points={gameData[0].answers[0].points}>1</Answer>
-                <Answer answer={gameData[0].answers[4].answer} points={gameData[0].answers[4].points}>5</Answer>
+        <div className='top-answers d-grid'>
+            <div className='answer-area row row-cols-2 justify-content-center'>
+                <div className='first-col d-flex flex-column justify-content-between'>
+                    <HiddenAnswer>1</HiddenAnswer>
+                    <HiddenAnswer>2</HiddenAnswer>
+                    <HiddenAnswer>3</HiddenAnswer>
+                    <HiddenAnswer>4</HiddenAnswer>
+                </div>
+                <div className='second-col d-flex flex-column justify-content-between'>
+                    <HiddenAnswer>5</HiddenAnswer>
+                    <HiddenAnswer>6</HiddenAnswer>
+                    <HiddenAnswer>7</HiddenAnswer>
+                    <HiddenAnswer>8</HiddenAnswer>
+                </div>
             </div>
-
-            <div className='row'>
-                <Answer answer={gameData[0].answers[1].answer} points={gameData[0].answers[1].points}>2</Answer>
-                <Answer answer={gameData[0].answers[5].answer} points={gameData[0].answers[5].points}>6</Answer>
-            </div>
-
-            <div className='row'>
-                <Answer answer={gameData[0].answers[2].answer} points={gameData[0].answers[2].points}>3</Answer>
-                <Answer answer={gameData[0].answers[6].answer || ''} points={gameData[0].answers[6].points || ''}>7</Answer>
-            </div>
-
-            <div className='row'>
-                <Answer answer={gameData[0].answers[3].answer} points={gameData[0].answers[3].points}>4</Answer>
-                <Answer answer={gameData[0].answers[7].answer || ''} points={gameData[0].answers[7].points || ''}>8</Answer>
-            </div>
-
         </div>
     )
 }
