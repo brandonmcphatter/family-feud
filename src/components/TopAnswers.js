@@ -1,26 +1,29 @@
 import './TopAnswers.css';
 import HiddenAnswer from "./HiddenAnswer";
+import {useGame} from "../context/GameContext";
 
 
 function TopAnswers({rd}) {
-    // const {gameData} = useGame();
-    // const round1Answers = gameData[rd].answers;
-    // const round1Points = gameData[rd].points;
+    const {gameData} = useGame();
+    const answers1 = gameData[rd].answers.slice(0, 4);
+    const answers2 = gameData[rd].answers.slice(4, 8);
 
     return (
         <div className='top-answers d-grid'>
-            <div className='answer-area row row-cols-2 justify-content-center'>
-                <div className='first-col d-flex flex-column justify-content-between'>
-                    <HiddenAnswer>1</HiddenAnswer>
-                    <HiddenAnswer>2</HiddenAnswer>
-                    <HiddenAnswer>3</HiddenAnswer>
-                    <HiddenAnswer>4</HiddenAnswer>
+            <div className='answer-area row row-cols-2  '>
+                <div className='first-col d-flex flex-column  justify-content-between'>
+                    {answers1.map((answer, index) =>
+                        (<HiddenAnswer answer={answer.answer} points={answer.points} key={index}>
+                            {index + 1}
+                        </HiddenAnswer>))}
                 </div>
+
+
                 <div className='second-col d-flex flex-column justify-content-between'>
-                    <HiddenAnswer>5</HiddenAnswer>
-                    <HiddenAnswer>6</HiddenAnswer>
-                    <HiddenAnswer>7</HiddenAnswer>
-                    <HiddenAnswer>8</HiddenAnswer>
+                    {answers2.map((answer, index) =>
+                        (<HiddenAnswer answer={answer.answer} points={answer.points} key={index}>
+                            {index + 5}
+                        </HiddenAnswer>))}
                 </div>
             </div>
         </div>
