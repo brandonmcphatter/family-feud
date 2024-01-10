@@ -1,4 +1,5 @@
 import {useGame} from "../context/GameContext";
+import {useEffect, useState} from "react";
 
 
 function ActionBar() {
@@ -10,9 +11,7 @@ function ActionBar() {
             <div className='col-3 d-flex justify-content-center align-items-center'>
                 <button className='btn btn-primary btn-lg' onClick={showQuestion}>Start Round</button>
             </div>
-            <div className='col-3 d-flex justify-content-center align-items-center'>
-                <button className='btn btn-success btn-lg'>Clock: ⏱️</button>
-            </div>
+            <Clock/>
             <div className='col-3 d-flex justify-content-center align-items-center '>
                 <button className='btn btn-danger btn-lg'>X</button>
                 <button className='btn btn-danger btn-lg mx-5'>X</button>
@@ -23,6 +22,27 @@ function ActionBar() {
             </div>
         </div>
     );
+}
+
+
+function Clock() {
+    const [time, setTime] = useState(7);
+    function startTimer() {
+        let timer = setInterval(() => {
+            setTime(time => time - 1);
+        }, 1000);
+
+        setTimeout(() => {
+            clearInterval(timer);
+        }, 7000);
+    }
+
+    return (
+        <div className='timer col-3 d-flex justify-content-center align-items-center'>
+            <button onClick={startTimer} className='btn btn-success btn-lg'>⏱️: {time}</button>
+        </div>
+    )
+
 }
 
 export default ActionBar;
