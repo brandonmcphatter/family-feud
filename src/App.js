@@ -7,8 +7,8 @@ import MenuItem from "./components/MenuItem";
 import HomeScreen from "./components/HomeScreen";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import SetupScreen from "./components/SetupScreen";
-import GameBoard from "./components/GameBoard";
 import AnswerBoard from "./components/answerboard/AnswerBoard";
+import SuddenDeathBoard from "./components/answerboard/SuddenDeathBoard";
 
 export default function App() {
 
@@ -32,7 +32,7 @@ export default function App() {
                 <Route path='round-1' element={<AnswerBoard rd={0}/>}/>
                 <Route path='round-2' element={<AnswerBoard rd={1}/>}/>
                 <Route path='round-3' element={<AnswerBoard rd={2}/>}/>
-                <Route path='sudden-death' element={<h1>Sudden Death</h1>}/>
+                <Route path='sudden-death' element={<SuddenDeathBoard rd={3}>1</SuddenDeathBoard>}/>
                 <Route path='fast-money1' element={<h1>Fast Money</h1>}/>
                 <Route path='fast-money2' element={<h1>Fast Money</h1>}/>
                 <Route path='final' element={<h1>Final</h1>}/>
