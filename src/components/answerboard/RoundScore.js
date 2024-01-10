@@ -1,5 +1,5 @@
 import './RoundScore.css';
-import {useGame} from "../context/GameContext";
+import {useGame} from "../../context/GameContext";
 
 function RoundScore() {
     const {roundScore} = useGame();
