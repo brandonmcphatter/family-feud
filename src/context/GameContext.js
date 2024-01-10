@@ -78,8 +78,54 @@ const round2 = {
     ]
 }
 
+const round3 = {
+    question: 'Tell Me A Word That Rhymes with “Election” ',
+    answers: [
+        {
+            answer: 'Selection',
+            points: 32,
+            revealed: false
+        },
+        {
+            answer: 'Erection',
+            points: 23,
+            revealed: false
+        },
+        {
+            answer: 'Perfection',
+            points: 6,
+            revealed: false
+        },
+        {
+            answer: 'Protection',
+            points: 6,
+            revealed: false
+        },
+        {
+            answer: 'Detection',
+            points: 5,
+            revealed: false
+        },
+        {
+            answer: 'Rejection',
+            points: 4,
+            revealed: false
+        },
+        {
+            answer: 'Collection',
+            points: 4,
+            revealed: false
+        },
+    ],
+}
+
+const suddenDeath = {
+    question: 'Name something you wind up.',
+    answer: 'Clock/Watch'
+}
+
 function GameProvider({children}) {
-    const gameData = [round1, round2]
+    const gameData = [round1, round2, round3, suddenDeath]
     const [team1, setTeam1] = useState("Johnson");
     const [team2, setTeam2] = useState("Martin");
     const [show, setShow] = useState(false);
