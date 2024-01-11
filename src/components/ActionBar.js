@@ -34,6 +34,7 @@ function Clock() {
 
         setTimeout(() => {
             clearInterval(timer);
+            setTime(7)
         }, 7000);
     }
 
