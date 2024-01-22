@@ -1,9 +1,10 @@
-import RoundScore from "./RoundScore";
-import TeamScore from "./TeamScore";
-import TopAnswers from "./TopAnswers";
-import RoundQuestion from "./RoundQuestion";
-import ActionBar from "./../ActionBar";
-import {useGame} from "../../context/GameContext";
+import RoundScore from "../components/answerboard/RoundScore";
+import {useGame} from "../context/GameContext";
+import TeamScore from "../components/answerboard/TeamScore";
+import TopAnswers from "../components/answerboard/TopAnswers";
+import RoundQuestion from "../components/answerboard/RoundQuestion";
+import ActionBar from "../components/ActionBar";
+
 
 function AnswerBoard({rd}) {
     const {t1Score, setT1Score, t2Score, setT2Score, roundScore} = useGame();

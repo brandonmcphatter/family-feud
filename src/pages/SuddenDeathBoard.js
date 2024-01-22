@@ -1,10 +1,11 @@
-import {useGame} from "../../context/GameContext";
-import HiddenAnswer from "./HiddenAnswer";
-import EmptyAnswer from "./EmptyAnswer";
-import RoundScore from "./RoundScore";
-import TeamScore from "./TeamScore";
-import RoundQuestion from "./RoundQuestion";
-import ActionBar from "../ActionBar";
+import EmptyAnswer from "../components/answerboard/EmptyAnswer";
+import HiddenAnswer from "../components/answerboard/HiddenAnswer";
+import RoundScore from "../components/answerboard/RoundScore";
+import TeamScore from "../components/answerboard/TeamScore";
+import RoundQuestion from "../components/answerboard/RoundQuestion";
+import ActionBar from "../components/ActionBar";
+import {useGame} from "../context/GameContext";
+
 
 function SuddenDeathBoard({rd}) {
     const {gameData, t1Score, setT1Score, t2Score, setT2Score, roundScore} = useGame();
