@@ -20,6 +20,9 @@ export default function ScoreScreen() {
             <Link to={'/game/fast-money'}>
                 <button>Fast Money</button>
             </Link>
+            <Link to={'/'}>
+                <button>Home</button>
+            </Link>
         </div>
     );
 }
