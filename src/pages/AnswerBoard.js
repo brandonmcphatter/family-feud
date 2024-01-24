@@ -1,8 +1,8 @@
-import RoundScore from "../components/answerboard/RoundScore";
+import RoundScore from "../components/answerBoard/RoundScore";
 import {useGame} from "../context/GameContext";
-import TeamScore from "../components/answerboard/TeamScore";
-import TopAnswers from "../components/answerboard/TopAnswers";
-import RoundQuestion from "../components/answerboard/RoundQuestion";
+import TeamScore from "../components/answerBoard/TeamScore";
+import TopAnswers from "../components/answerBoard/TopAnswers";
+import RoundQuestion from "../components/answerBoard/RoundQuestion";
 import ActionBar from "../components/ActionBar";
 
 
