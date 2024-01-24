@@ -9,7 +9,7 @@ function TeamNameWindow() {
     return (
         <div>
             <Modal  show={true} onHide={handleClose} >
-                <Modal.Body style={{backgroundColor: '#f3e640'}}>
+                <Modal.Body style={{backgroundColor: '#f3e640' , borderRadius: '15px'}}>
                     <h3 className='text-center text-decoration-underline'>Enter Team Names</h3>
 
                     <div className='d-flex flex-column my-2 px-3'>
@@ -28,7 +28,7 @@ function TeamNameWindow() {
 
                     <div className='d-flex justify-content-evenly mt-4'>
                         <Button variant="secondary" onClick={handleClose}>
-                            Close
+                            Cancel
                         </Button>
                         <Link to={'/game'}>
                             <Button variant="primary" onClick={handleClose}>
