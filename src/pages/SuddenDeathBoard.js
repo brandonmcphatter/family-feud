@@ -1,8 +1,8 @@
-import EmptyAnswer from "../components/answerboard/EmptyAnswer";
-import HiddenAnswer from "../components/answerboard/HiddenAnswer";
-import RoundScore from "../components/answerboard/RoundScore";
-import TeamScore from "../components/answerboard/TeamScore";
-import RoundQuestion from "../components/answerboard/RoundQuestion";
+import EmptyAnswer from "../components/answerBoard/EmptyAnswer";
+import HiddenAnswer from "../components/answerBoard/HiddenAnswer";
+import RoundScore from "../components/answerBoard/RoundScore";
+import TeamScore from "../components/answerBoard/TeamScore";
+import RoundQuestion from "../components/answerBoard/RoundQuestion";
 import ActionBar from "../components/ActionBar";
 import {useGame} from "../context/GameContext";
 
