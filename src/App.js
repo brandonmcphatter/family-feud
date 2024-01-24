@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import HomeScreen from "./pages/HomeScreen"
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import SetupScreen from "./pages/SetupScreen";
 import AnswerBoard from "./pages/AnswerBoard";
 import SuddenDeathBoard from "./pages/SuddenDeathBoard";
@@ -22,6 +22,7 @@ export default function App() {
                 <Route index element={<HomeScreen/>}/>
                 <Route path='setup' element={<SetupScreen/>}/>
                 <Route path='game' element={<GameScreen/>}>
+                    <Route index element={<Navigate replace to='scoreboard'/>}/>
                     <Route path='scoreboard' element={<ScoreScreen/>}/>
                     <Route path='round-1' element={<AnswerBoard rd={0}/>}/>
                     <Route path='round-2' element={<AnswerBoard rd={1}/>}/>
