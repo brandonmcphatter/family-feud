@@ -1,9 +1,16 @@
 import {useGame} from "../context/GameContext";
-import {useEffect, useState} from "react";
+import { useState} from "react";
+import {useNavigate} from "react-router";
 
 
 function ActionBar() {
-    const {showQuestion} = useGame();
+    const {showQuestion, setRoundScore} = useGame();
+    const navigate = useNavigate();
+
+    function toScoreBoard() {
+        setRoundScore(0);
+        navigate('/game/scoreboard')
+    }
 
 
     return (
@@ -18,7 +25,7 @@ function ActionBar() {
                 <button className='btn btn-danger btn-lg'>X</button>
             </div>
             <div className='col-3 d-flex justify-content-center align-items-center'>
-                <button className='btn btn-warning btn-lg'>End Game</button>
+                <button onClick={toScoreBoard} className='btn btn-warning btn-lg'>ScoreBoard</button>
             </div>
         </div>
     );
