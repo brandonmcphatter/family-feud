@@ -10,11 +10,7 @@ import WinScreen from "./pages/WinScreen";
 import FastMoney from "./pages/FastMoney";
 import ScoreScreen from "./pages/ScoreScreen";
 
-
-
 export default function App() {
-
-
 
     return (
         <BrowserRouter>
@@ -33,8 +29,6 @@ export default function App() {
                 </Route>
             </Routes>
         </BrowserRouter>
-
-
     );
 }
 
