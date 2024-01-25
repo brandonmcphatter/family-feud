@@ -124,8 +124,38 @@ const suddenDeath = {
     answer: 'Clock/Watch'
 }
 
+const fastMoneyRound = [
+    {
+    question: 'Name something in a person’s closet that only comes out on special occasions.',
+    answers:
+        ['Suit/Tux', 'Dress', 'Jewelry', 'Shoes', 'Shotgun'],
+    points:
+        [35, 26, 10, 6, 4]
+},
+    {
+      question: '',
+      answers: [],
+      points: []
+    },
+    {
+        question: '',
+        answers: [],
+        points: []
+    },
+    {
+        question: '',
+        answers: [],
+        points: []
+    },
+    {
+        question: '',
+        answers: [],
+        points: []
+    }
+]
+
 function GameProvider({children}) {
-    const gameData = [round1, round2, round3, suddenDeath]
+    const gameData = [round1, round2, round3, suddenDeath, fastMoneyRound]
     const [team1, setTeam1] = useState("Johnson");
     const [team2, setTeam2] = useState("Martin");
     const [show, setShow] = useState(false);
@@ -133,6 +163,7 @@ function GameProvider({children}) {
     const [t2Score, setT2Score] = useState(0);
     const [roundScore, setRoundScore] = useState(0);
     const [roundQuestionHidden, setRoundQuestionHidden] = useState(true);
+    const [fastMoneyScore, setFastMoneyScore] = useState(0)
 
     const showQuestion = () => {
         setRoundQuestionHidden(false);
@@ -162,6 +193,8 @@ function GameProvider({children}) {
             setRoundScore,
             roundQuestionHidden,
             setRoundQuestionHidden,
+            fastMoneyScore,
+            setFastMoneyScore,
             showQuestion,
             handleShow,
             handleClose
