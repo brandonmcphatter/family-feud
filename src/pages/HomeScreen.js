@@ -3,14 +3,16 @@ import MenuItem from "../components/MenuItem";
 import TeamNameWindow from "../components/TeamNameWindow";
 import {useGame} from "../context/GameContext";
 import {Link} from "react-router-dom";
+import 'animate.css'
+import familyFeudLogo from '../images/big-ff-logo.png';
 
 function HomeScreen({children}) {
-
     const {show, handleShow} = useGame();
-
     return (
-        <div className="homeScreen container-fluid d-flex flex-row justify-content-evenly align-items-end">
-            {children}
+        <div className="homeScreen d-flex flex-column justify-content-evenly ">
+            <div className="ff-logo container-fluid d-flex justify-content-center ">
+            <img className={'animate__animated animate__pulse animate__slow animate__infinite'} src={familyFeudLogo} alt="FF Logo"/>
+            </div>
             <MainMenu>
                 <MenuItem onclick={handleShow}>New Game</MenuItem>
                 <Link to={'/setup'}>
