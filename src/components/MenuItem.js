@@ -1,6 +1,8 @@
+import './MenuItem.css'
+
 function MenuItem({children, onclick}) {
     return (
-        <button onClick={onclick} className='border rounded-3'><h1>{children}</h1></button>
+        <button onClick={onclick} className='menu-button'><h1>{children}</h1></button>
     )
 }
 
