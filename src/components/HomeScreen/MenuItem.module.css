@@ -1,0 +1,15 @@
+.menuButton {
+    color: white;
+    background-color: transparent;
+    border: 6px solid white;
+
+    border-radius: 50%;
+    width: 350px;
+    height: 150px;
+
+}
+
+.menuButton:hover {
+    background: rgb(250,151,64);
+    background: linear-gradient(60deg, rgba(250,151,64,1) 53%, rgba(26,54,220,1) 100%);    color: darkblue;
+}

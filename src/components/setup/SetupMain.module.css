@@ -1,0 +1,16 @@
+.mainSetup {
+    width: 70%;
+    height: 55vh;
+    color: white;
+    background-color: #252525;
+    border: 5px solid yellow;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}

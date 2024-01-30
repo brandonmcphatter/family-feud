@@ -1,0 +1,22 @@
+.questionWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    font-size: 3rem;
+}
+
+.qLabel {
+    width: 20%;
+    font-weight: bold;
+    text-transform: uppercase;
+
+
+}
+
+.qInput {
+    flex: max-content;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
