@@ -1,10 +1,12 @@
-import MainMenu from "../components/MainMenu";
-import MenuItem from "../components/MenuItem";
-import TeamNameWindow from "../components/TeamNameWindow";
+
+
 import {useGame} from "../context/GameContext";
 import {Link} from "react-router-dom";
 import 'animate.css'
 import familyFeudLogo from '../images/big-ff-logo.png';
+import MainMenu from "../components/HomeScreen/MainMenu";
+import MenuItem from "../components/HomeScreen/MenuItem";
+import TeamNameWindow from "../components/HomeScreen/TeamNameWindow";
 
 function HomeScreen({children}) {
     const {show, handleShow} = useGame();
