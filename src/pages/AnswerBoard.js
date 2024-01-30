@@ -10,15 +10,30 @@ function AnswerBoard({rd}) {
     const {t1Score, setT1Score, t2Score, setT2Score, roundScore} = useGame();
 
     return (
-        <div >
-            <RoundScore/>
-            <div className='d-flex justify-content-evenly align-content-center'>
-                <TeamScore teamScore={t1Score} setScore={setT1Score} roundScore={roundScore}/>
-                <TopAnswers rd={rd}/>
-                <TeamScore teamScore={t2Score} setScore={setT2Score} roundScore={roundScore}/>
+        <div>
+            <div className={'animate__animated animate__slideInDown'}>
+                <RoundScore/>
             </div>
+
+            <div className='d-flex justify-content-evenly align-content-center'>
+                <div className={'align-self-center animate__animated animate__zoomInLeft'}>
+                    <TeamScore teamScore={t1Score} setScore={setT1Score} roundScore={roundScore}/>
+                </div>
+
+                <div className={'animate__animated animate__fadeInUpBig'}>
+                    <TopAnswers rd={rd}/>
+                </div>
+
+                <div className={'align-self-center animate__animated animate__zoomInRight'}>
+                    <TeamScore teamScore={t2Score} setScore={setT2Score} roundScore={roundScore}/>
+                </div>
+            </div>
+
             <RoundQuestion/>
-            <ActionBar/>
+
+            <div className={'animate__animated animate__rotateInUpLeft animate__slow'}>
+                <ActionBar/>
+            </div>
         </div>
     );
 }

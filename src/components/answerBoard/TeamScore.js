@@ -7,7 +7,7 @@ function TeamScore({teamScore, setScore, roundScore}) {
     }
 
     return (
-        <div className='teamScore align-self-center d-flex justify-content-center align-items-center  '>
+        <div className='animate__animated animate__slideInLeft teamScore  d-flex justify-content-center align-items-center  '>
             <div className='score fw-bolder display-1' onClick={addRoundToTeamScore}>{teamScore}</div>
 
         </div>
