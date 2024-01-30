@@ -1,11 +1,12 @@
-import {useGame} from "../context/GameContext";
+
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
 import {useNavigate} from "react-router";
+import {useGame} from "../../context/GameContext";
 
 function TeamNameWindow() {
-    const {setTeam1, setTeam2, team1, team2, handleClose} = useGame();
+    const {setTeam1, setTeam2, team1, team2, handleClose} =  useGame();
     const notReady = team1 === '' || team2 === '';
     const navigate = useNavigate();
     function moveToGame() {
