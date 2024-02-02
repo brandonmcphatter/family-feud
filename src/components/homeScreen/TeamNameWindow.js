@@ -1,4 +1,3 @@
-
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
@@ -6,17 +5,20 @@ import {useNavigate} from "react-router";
 import {useGame} from "../../context/GameContext";
 
 function TeamNameWindow() {
-    const {setTeam1, setTeam2, team1, team2, handleClose} =  useGame();
+    const {setTeam1, setTeam2, team1, team2, handleClose} = useGame();
     const notReady = team1 === '' || team2 === '';
     const navigate = useNavigate();
+
     function moveToGame() {
         navigate('/game')
+        handleClose();
     }
+
     return (
-        <div >
-            <Modal  show={true} onHide={handleClose}
-                    size="med"
-                    centered >
+        <div>
+            <Modal show={true} onHide={handleClose}
+                   size="med"
+                   centered>
                 <Modal.Body style={{backgroundColor: 'darkgoldenrod', border: '5px solid white'}}>
                     <div style={{height: '30vh'}}>
 
@@ -42,9 +44,9 @@ function TeamNameWindow() {
                                 Cancel
                             </Button>
 
-                                <Button variant="success" onClick={moveToGame} disabled={notReady}>
-                                    Let's Play!
-                                </Button>
+                            <Button variant="success" onClick={moveToGame} disabled={notReady}>
+                                Let's Play!
+                            </Button>
 
                         </div>
                     </div>
