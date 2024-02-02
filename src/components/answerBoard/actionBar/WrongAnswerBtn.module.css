@@ -1,0 +1,20 @@
+.wrongAnswer {
+    border: 2px dotted red;
+    border-radius: 10px;
+    width: 2rem;
+
+}
+
+.off {
+    background-color: transparent;
+    color: red;
+}
+.on {
+    background-color: red;
+    color: black;
+}
+
+/*.wrongAnswer:hover {*/
+/*    background-color: red;*/
+/*    color: black;*/
+/*}*/

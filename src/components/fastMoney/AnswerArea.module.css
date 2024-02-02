@@ -1,0 +1,11 @@
+.fastMoney {
+    margin: auto;
+    border: 15px solid darkblue;
+    border-radius: 12px;
+    width: 85%;
+    height: 100%;
+    background: rgb(8,85,167);
+    background: linear-gradient(242deg, rgba(8,85,167,1) 0%, rgba(17,46,184,1) 45%);
+    display: flex;
+    flex-direction: column;
+}

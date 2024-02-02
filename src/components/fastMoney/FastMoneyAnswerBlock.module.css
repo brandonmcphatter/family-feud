@@ -1,0 +1,32 @@
+.fastMoneyAnswer {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+}
+
+.answerBlock {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 84%;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.69);
+    cursor: pointer;
+}
+
+.pointsBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.69);
+    cursor: pointer;
+}
+

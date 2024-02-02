@@ -1,0 +1,21 @@
+.winScreen {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigMoney {
+    font-size: 20rem;
+    font-weight: bolder;
+    color: gold;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 5px;
+
+}
+
+.moneyBag {
+    font-size: 10rem;
+}

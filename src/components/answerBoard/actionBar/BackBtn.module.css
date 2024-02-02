@@ -1,0 +1,13 @@
+.backBtn {
+    border: 2px solid green;
+    background-color: rgba(0, 128, 0, 0.43);
+    color: white;
+    border-radius: 15px;
+    width: 50%;
+    height: 50px;
+}
+
+.backBtn:hover {
+    border: 2px solid white;
+    background: green;
+}

@@ -1,0 +1,12 @@
+.strikeSection {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    border-radius: 15px;
+    background-color: rgba(22, 37, 37, 0.51);
+    padding: 0 20px;
+
+
+}

@@ -2,11 +2,9 @@
     color: white;
     background-color: transparent;
     border: 6px solid white;
-
     border-radius: 50%;
     width: 350px;
     height: 150px;
-
 }
 
 .menuButton:hover {

@@ -1,0 +1,27 @@
+
+.totalPointsColumn {
+    width: 48%;
+    margin-right: 15px;
+
+}
+.totalPointsBlock {
+    width: 100%;
+    height: 10vh;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.69);
+
+}
+
+.totalText {
+    width: 60%;
+}
+
+.totalPoints {
+    display: flex;
+    justify-content: end;
+    width: 40%;
+}

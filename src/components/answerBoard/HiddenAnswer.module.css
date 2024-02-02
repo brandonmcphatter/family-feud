@@ -1,4 +1,4 @@
-.hidden-answer{
+.hiddenAnswer{
     background-color: deepskyblue;
     height: 12vh;
     width: 29vw;
@@ -6,7 +6,10 @@
     cursor: pointer;
 }
 
-.inner-box {
+.innerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 5px solid lightgray;
     width: 100%;
     height: 100%;
@@ -14,7 +17,9 @@
     background: linear-gradient(0deg, rgba(42,78,148,1) 7%, rgba(37,78,158,1) 32%, rgba(19,78,193,1) 69%, rgba(255,255,255,1) 100%);
 }
 
-.answer-number {
+.answerNumber {
+    font-weight: bolder;
+    text-align: center;
     color: white;
     border: 1px solid white;
     border-radius: 60%;
@@ -24,19 +29,27 @@
 }
 .answer {
     color: white;
+    font-weight: bolder;
 }
 
 .points {
     color: white;
+    font-weight: bolder;
 }
 
-.answer-box {
+.answerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 80%;
     height: 100%;
     border-right: 5px solid lightgray;
 }
 
-.points-box {
+.pointsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20%;
     height: 100%;
     border-left: 1px solid lightgray;

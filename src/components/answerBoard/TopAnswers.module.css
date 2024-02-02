@@ -1,0 +1,23 @@
+.topAnswers {
+    display: grid;
+    border: #e7a13a 15px solid;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    height: 55vh;
+    width: 62vw;
+    padding: 10px 10px;
+}
+
+.firstCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.secondCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
