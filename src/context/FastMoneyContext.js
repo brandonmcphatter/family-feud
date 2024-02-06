@@ -32,6 +32,32 @@ function FastMoneyProvider ({children}) {
     const [player1Points, setPlayer1Points] = useState([p1, p2, p3, p4, p5]);
     const [player2Points, setPlayer2Points] = useState([p6, p7, p8, p9, p10]);
 
+    function resetFastMoney(){
+        setFastMoneyScore(0);
+        setA1('');
+        setA2('');
+        setA3('');
+        setA4('');
+        setA5('');
+        setA6('');
+        setA7('');
+        setA8('');
+        setA9('');
+        setA10('');
+        setP1(0);
+        setP2(0);
+        setP3(0);
+        setP4(0);
+        setP5(0);
+        setP6(0);
+        setP7(0);
+        setP8(0);
+        setP9(0);
+        setP10(0);
+
+
+    }
+
     return (
         <FastMoneyContext.Provider value={{
             fastMoneyScore,
@@ -89,7 +115,8 @@ function FastMoneyProvider ({children}) {
             player2Answers,
             setPlayer2Answers,
             showAnswers,
-            setShowAnswers
+            setShowAnswers,
+            resetFastMoney
         }}>
             {children}
         </FastMoneyContext.Provider>
