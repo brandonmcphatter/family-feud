@@ -4,7 +4,7 @@ import HomeScreen from "./pages/HomeScreen"
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import SetupScreen from "./pages/SetupScreen";
 import AnswerBoard from "./pages/AnswerBoard";
-import SuddenDeathBoard from "./pages/SuddenDeathBoard";
+
 import GameScreen from "./pages/GameScreen";
 import WinScreen from "./pages/WinScreen";
 import FastMoney from "./pages/FastMoney";
@@ -23,7 +23,8 @@ export default function App() {
                     <Route path='round-1' element={<AnswerBoard rd={0}/>}/>
                     <Route path='round-2' element={<AnswerBoard rd={1}/>}/>
                     <Route path='round-3' element={<AnswerBoard rd={2}/>}/>
-                    <Route path='sudden-death' element={<SuddenDeathBoard rd={3}>1</SuddenDeathBoard>}/>
+                    <Route path='round-4' element={<AnswerBoard rd={3}/>}/>
+                    <Route path='sudden-death' element={<AnswerBoard rd={4}/>}/>
                     <Route path='fast-money' element={<FastMoney/>}/>
                     <Route path='final' element={<WinScreen/>}/>
                 </Route>
