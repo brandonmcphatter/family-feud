@@ -1,8 +1,7 @@
 import Modal from "react-bootstrap/Modal";
 import {useNavigate} from "react-router";
-import '../fastMoney/FastMoney.css'
-import {useGame} from "../../context/GameContext";
-
+import {useFastMoney} from "../../context/FastMoneyContext";
+import styles from './FastMoneyToolbar.module.css'
 
 export default function FastMoneyToolbar() {
     const {
@@ -31,7 +30,7 @@ export default function FastMoneyToolbar() {
         setPlayer1Answers, setPlayer1Points,
         setPlayer2Points, setPlayer2Answers,
         showAnswers, setShowAnswers
-    } = useGame();
+    } = useFastMoney();
 
 
     const navigate = useNavigate();
@@ -75,11 +74,11 @@ export default function FastMoneyToolbar() {
 
     return (
         <>
-            <div className={'fm-tools mt-5 text-center d-flex justify-content-center align-items-center gap-4'}>
-                <button onClick={openPlayer1} className={'fm-button'}>Player 1</button>
-                <button onClick={openPlayer2} className={'fm-button'}>Player 2</button>
-                <button onClick={toggleAnswers} className={'fm-button'}>Show / Hide</button>
-                <button onClick={toHome} className={'fm-button'}>End Game</button>
+            <div className={`${styles.fmTools} mt-5 gap-4`}>
+                <button onClick={openPlayer1} className={styles.fmButton}>Player 1</button>
+                <button onClick={openPlayer2} className={styles.fmButton}>Player 2</button>
+                <button onClick={toggleAnswers} className={styles.fmButton}>Show / Hide</button>
+                <button onClick={toHome} className={styles.fmButton}>End Game</button>
             </div>
 
             <Modal show={p1Modal}>
@@ -88,33 +87,33 @@ export default function FastMoneyToolbar() {
                     <div className={'text-center fw-bolder display-6 mb-3'}>Fast Money - PLAYER 1</div>
                     <div className={'d-flex flex-column gap-4 mb-3'}>
                         <div className={' d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer1'} value={a1}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer1'} value={a1}
                                    onChange={e => setA1(e.target.value)}/>
-                            <input className={'points-input '} type="text" id={'points1'} value={p1}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points1'} value={p1}
                                    onChange={e => setP1(Number(e.target.value))}/>
                         </div>
                         <div className={'d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer2'} value={a2}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer2'} value={a2}
                                    onChange={e => setA2(e.target.value)}/>
-                            <input className={'points-input'} type="text" id={'points2'} value={p2}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points2'} value={p2}
                                    onChange={e => setP2(Number(e.target.value))}/>
                         </div>
                         <div className={'d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer3'} value={a3}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer3'} value={a3}
                                    onChange={e => setA3(e.target.value)}/>
-                            <input className={'points-input '} type="text" id={'points3'} value={p3}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points3'} value={p3}
                                    onChange={e => setP3(Number(e.target.value))}/>
                         </div>
                         <div className={'d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer4'} value={a4}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer4'} value={a4}
                                    onChange={e => setA4(e.target.value)}/>
-                            <input className={'points-input '} type="text" id={'points4'} value={p4}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points4'} value={p4}
                                    onChange={e => setP4(Number(e.target.value))}/>
                         </div>
                         <div className={'d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer5'} value={a5}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer5'} value={a5}
                                    onChange={e => setA5(e.target.value)}/>
-                            <input className={'points-input '} type="text" id={'points5'} value={p5}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points5'} value={p5}
                                    onChange={e => setP5(Number(e.target.value))}/>
                         </div>
                     </div>
@@ -130,33 +129,33 @@ export default function FastMoneyToolbar() {
                     <div className={'text-center fw-bolder display-6 mb-3'}>Fast Money - PLAYER 2</div>
                     <div className={'d-flex flex-column gap-4 mb-3'}>
                         <div className={' d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer1'}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer1'}
                                    onChange={e => setA6(e.target.value)}/>
-                            <input className={'points-input '} type="text" id={'points1'}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points1'}
                                    onChange={e => setP6(Number(e.target.value))}/>
                         </div>
                         <div className={'d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer2'}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer2'}
                                    onChange={e => setA7(e.target.value)}/>
-                            <input className={'points-input'} type="text" id={'points2'}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points2'}
                                    onChange={e => setP7(Number(e.target.value))}/>
                         </div>
                         <div className={'d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer3'}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer3'}
                                    onChange={e => setA8(e.target.value)}/>
-                            <input className={'points-input '} type="text" id={'points3'}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points3'}
                                    onChange={e => setP8(Number(e.target.value))}/>
                         </div>
                         <div className={'d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer4'}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer4'}
                                    onChange={e => setA9(e.target.value)}/>
-                            <input className={'points-input '} type="text" id={'points4'}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points4'}
                                    onChange={e => setP9(Number(e.target.value))}/>
                         </div>
                         <div className={'d-flex justify-content-center gap-1'} style={{height: '50px'}}>
-                            <input className={'answer-input '} type="text" id={'answer5'}
+                            <input className={`${styles.answerInput} ${styles.inputStyle}`} type="text" id={'answer5'}
                                    onChange={e => setA10(e.target.value)}/>
-                            <input className={'points-input '} type="text" id={'points5'}
+                            <input className={`${styles.pointsInput} ${styles.inputStyle}`} type="text" id={'points5'}
                                    onChange={e => setP10(Number(e.target.value))}/>
                         </div>
                     </div>
