@@ -1,6 +1,8 @@
+import styles from './AnswerArea.module.css'
+
 export default function AnswerArea({children}) {
     return (
-        <div className='fast-money'>
+        <div className={styles.fastMoney}>
             {children}
         </div>
     )
