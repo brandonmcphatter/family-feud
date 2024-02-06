@@ -1,33 +1,36 @@
 import {useState} from "react";
 import {useGame} from "../../context/GameContext";
-import './HiddenAnswer.css';
+import styles from './HiddenAnswer.module.css';
+import useSound from "use-sound";
+import correct from '../../audio/family-feud-good-answer.mp3'
 
 function HiddenAnswer({children, answer, points}) {
     const [hide, setHide] = useState(true);
     const {roundScore, setRoundScore} = useGame();
-
+    const [play] = useSound(correct, {volume: 1});
     function showAnswer() {
         setHide(false);
         setRoundScore(roundScore + points);
+        play();
     }
 
     return (
         <div>
             {hide &&
-                <div className=' hidden-answer ' onClick={showAnswer}>
-                    <div className='inner-box d-flex justify-content-center align-items-center'>
-                        <span className='answer-number text-center display-2 fw-bolder'>{children}</span>
+                <div className={styles.hiddenAnswer} onClick={showAnswer}>
+                    <div className={styles.innerBox}>
+                        <span className={`display-2 ${styles.answerNumber}`}>{children}</span>
                     </div>
                 </div>}
 
             {!hide &&
-                <div className=' hidden-answer d-flex justify-content-center align-items-center' >
-                    <div className='inner-box d-flex'>
-                        <div className='answer-box d-flex align-items-center justify-content-center'>
-                            <span className=' answer display-1 fw-bolder'>{answer}</span>
+                <div className={` ${styles.hiddenAnswer} d-flex justify-content-center align-items-center animate__animated animate__flipInX`} >
+                    <div className={`${styles.innerBox} d-flex`}>
+                        <div className={styles.answerBox}>
+                            <span className={`${styles.answer} display-1`}>{answer}</span>
                         </div>
-                        <div className='points-box d-flex align-items-center justify-content-center'>
-                            <span className='points display-1 fw-bolder'>{points}</span>
+                        <div className={styles.pointsBox}>
+                            <span className={`display-1 ${styles.points}`}>{points}</span>
                         </div>
                     </div>
                 </div>}
