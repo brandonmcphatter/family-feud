@@ -1,12 +1,12 @@
 import {useGame} from "../../context/GameContext";
-import './RoundQuestion.css';
+import styles from './RoundQuestion.module.css';
 
 function RoundQuestion() {
     const {roundQuestionHidden, gameData} = useGame();
 
     return (
-        <div className='roundQuestion d-flex justify-content-center align-items-center '>
-            <h1 className='text-center'>{roundQuestionHidden ? '' : gameData[0].question} </h1>
+        <div className={`${styles.roundQuestion} my-3`}>
+            <h1 className='text-center text-white'>{roundQuestionHidden ? '' : gameData[0].question} </h1>
         </div>
     );
 }

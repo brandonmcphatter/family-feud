@@ -1,11 +1,11 @@
-import './RoundScore.css';
+import styles from './RoundScore.module.css';
 import {useGame} from "../../context/GameContext";
 
 function RoundScore() {
     const {roundScore} = useGame();
     return (
-        <div className='scoreArea mt-3 mb-2 d-flex justify-content-center align-items-center'>
-            <div className='roundScore d-flex justify-content-center align-items-center'>
+        <div className={`${styles.scoreArea} pt-3 mb-2 `}>
+            <div className={styles.roundScore}>
                 <div className='fw-bolder display-1'>{roundScore}</div>
             </div>
         </div>
