@@ -6,10 +6,10 @@ import SetupGameDataToggle from "../components/setup/SetupGameDataToggle";
 import {useState} from "react";
 
 function SetupScreen() {
-    const [roundDisplay, setRoundDisplay] = useState(1);
+    const [roundDisplay, setRoundDisplay] = useState(0);
 
     return (
-        <div className={styles.setupBody}>
+        <div className={`${styles.setupBody} animate__animated`}>
             <div className={'d-flex flex-column justify-content-center'}>
                 <SetupHeader/>
                 <SetupButtonBar roundDisplay={roundDisplay} setRoundDisplay={setRoundDisplay}/>
