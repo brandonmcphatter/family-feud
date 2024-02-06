@@ -3,14 +3,15 @@ import {useGame} from "../context/GameContext";
 import TeamScore from "../components/answerBoard/TeamScore";
 import TopAnswers from "../components/answerBoard/TopAnswers";
 import RoundQuestion from "../components/answerBoard/RoundQuestion";
-import ActionBar from "../components/ActionBar";
-
+import styles from './AnswerBoard.module.css';
+import ActionBar from "../components/answerBoard/actionBar/ActionBar";
 
 function AnswerBoard({rd}) {
     const {t1Score, setT1Score, t2Score, setT2Score, roundScore} = useGame();
 
     return (
-        <div>
+        <div className={`${styles.answerBoard} animate__animated animate__fadeIn`}>
+
             <div className={'animate__animated animate__slideInDown'}>
                 <RoundScore/>
             </div>
@@ -31,7 +32,7 @@ function AnswerBoard({rd}) {
 
             <RoundQuestion/>
 
-            <div className={'animate__animated animate__rotateInUpLeft animate__slow'}>
+            <div className={'animate__animated animate__rotateInUpLeft animate__slow mt-4'}>
                 <ActionBar/>
             </div>
         </div>
