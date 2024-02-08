@@ -1,11 +1,11 @@
 import SetupQuestion from "./SetupQuestion";
 import SetupAnswerArea from "./SetupAnswerArea";
 
-export default function SetupAnswers() {
+export default function SetupAnswers({rdNum}) {
     return (
         <>
-            <SetupQuestion roundNum={1}/>
-            <SetupAnswerArea/>
+            <SetupQuestion rdNum={rdNum}/>
+            <SetupAnswerArea rdNum={rdNum}/>
         </>
     );
 }

@@ -1,24 +1,27 @@
-import {useState} from "react";
+
 import styles from './SetupGameDataToggle.module.css'
-
-
-
-
+import {useGame} from "../../context/GameContext";
 
 export default function SetupGameDataToggle() {
-    const [gameChoice, setGameChoice] = useState(false);
+    const {gameChoice, setGameChoice, setGameData, ogGameData, userGameData, gameData} = useGame();
 
     function changeGameChoice() {
-        if (gameChoice === true){
+        if (gameChoice === true) {
             setGameChoice(false)
-        } else setGameChoice(true);
+            setGameData(ogGameData)
+        } else {
+            setGameChoice(true);
+            setGameData(userGameData)
+        }
         console.log(gameChoice)
+        console.log(gameData)
         return gameChoice;
     }
+
     return (
         <div className={gameChoice ? styles.toggleBoxOn : styles.toggleBoxOff}>
             <label htmlFor="gameChoice"><span className={'h4'}>USE YOUR CUSTOM GAME DATA ?</span></label>
-            <input className={styles.gameToggle} type={'checkbox'} onClick={changeGameChoice} checked={gameChoice}/>
+            <input className={styles.gameToggle} type={'checkbox'} onChange={changeGameChoice} checked={gameChoice}/>
         </div>
     );
 }
