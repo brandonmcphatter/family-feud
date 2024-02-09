@@ -1,17 +1,17 @@
-import EmptyAnswer from "../components/answerBoard/EmptyAnswer";
-import HiddenAnswer from "../components/answerBoard/HiddenAnswer";
+import styles from './SuddenDeathBoard.module.css'
 import RoundScore from "../components/answerBoard/RoundScore";
 import TeamScore from "../components/answerBoard/TeamScore";
 import RoundQuestion from "../components/answerBoard/RoundQuestion";
 import ActionBar from "../components/ActionBar";
 import {useGame} from "../context/GameContext";
+import TopAnswersSD from "../components/answerBoard/TopAnswersSD";
 
-function SuddenDeathBoard({rd}) {
-    const {gameData, t1Score, setT1Score, t2Score, setT2Score, roundScore} = useGame();
-    const theAnswer = gameData[rd].answer;
+function SuddenDeathBoard() {
+    const {t1Score, setT1Score, t2Score, setT2Score, roundScore} = useGame();
+
 
     return (
-        <div>
+        <div className={styles.answerBoard}>
             <div className={'animate__animated animate__slideInDown'}>
                 <RoundScore/>
             </div>
@@ -23,20 +23,8 @@ function SuddenDeathBoard({rd}) {
                 </div>
 
                 <div className={'animate__animated animate__fadeInUpBig'}>
-                    <div className='top-answers d-grid'>
-                        <div className='answer-area row row-cols-2  '>
-                            <div className='first-col d-flex flex-column  justify-content-between'>
-                                <HiddenAnswer answer={theAnswer}>1</HiddenAnswer>
-                                <EmptyAnswer/>
-                                <EmptyAnswer/>
-                                <EmptyAnswer/>
-                            </div>
+                    <TopAnswersSD rd={3}/>
 
-                            <div className='second-col d-flex flex-column justify-content-between'>
-                                <EmptyAnswer/><EmptyAnswer/><EmptyAnswer/><EmptyAnswer/>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div className={'align-self-center animate__animated animate__zoomInRight'}>
