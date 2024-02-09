@@ -1,7 +1,7 @@
 import styles from './SetupQuestion.module.css'
 import {useCustomGame} from "../../context/CustomGameContext";
 
-export default function SetupQuestion({rdNum}) {
+export default function SetupQuestion({rdNum, question}) {
     const {customQuestions, setCustomQuestions} = useCustomGame();
 
     const changeQuestion = (e) => {
