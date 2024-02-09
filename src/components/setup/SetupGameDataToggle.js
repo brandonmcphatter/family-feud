@@ -1,9 +1,8 @@
-
 import styles from './SetupGameDataToggle.module.css'
 import {useGame} from "../../context/GameContext";
 
 export default function SetupGameDataToggle() {
-    const {gameChoice, setGameChoice, setGameData, ogGameData, userGameData, gameData} = useGame();
+    const {gameChoice, setGameChoice, setGameData, ogGameData, userGameData} = useGame();
 
     function changeGameChoice() {
         if (gameChoice === true) {
