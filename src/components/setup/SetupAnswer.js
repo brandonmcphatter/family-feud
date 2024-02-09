@@ -1,28 +1,27 @@
 import styles from './SetupAnswer.module.css'
 import {useCustomGame} from "../../context/CustomGameContext";
 
-export default function SetupAnswer({answer, points, answerNum, rdNum}) {
+export default function SetupAnswer({allAnswers, allPoints, answer, setAnswers, points, setPoints, answerNum, rdNum}) {
 
-    const {customGameData, setRound1Answers} = useCustomGame();
 
     function changeAnswer(e) {
-        const newAnswers = customGameData[rdNum].answers.map((a, i) => {
+        const newAnswers = allAnswers.map((a, i) => {
             if (i === answerNum-1) {
-                return {answer: e, points: a.points};
+                return e;
             }
-            return {answer: a.answer, points: a.points};
+            return a;
         });
-        setRound1Answers(newAnswers);
+        setAnswers(newAnswers);
     }
 
     function changePoints(e) {
-        const newPoints = customGameData[rdNum].answers.map((p, i) => {
+        const newPoints = allPoints.map((p, i) => {
             if (i === answerNum-1) {
                 return e;
             }
             return p;
         });
-        setRound1Answers(newPoints);
+        setPoints(newPoints);
     }
 
     return (
