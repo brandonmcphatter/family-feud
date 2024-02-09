@@ -13,8 +13,6 @@ export default function SetupGameDataToggle() {
             setGameChoice(true);
             setGameData(userGameData)
         }
-        console.log(gameChoice)
-        console.log(gameData)
         return gameChoice;
     }
 
