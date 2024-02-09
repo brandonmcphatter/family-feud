@@ -6,7 +6,7 @@ import showAnswer from '../../audio/fast-money-answer-reveal-101soundboards.mp3'
 import showPoints from '../../audio/family-feud-good-answer.mp3'
 
 export default function FastMoneyAnswerBlock({answer, points}) {
-    const {fastMoneyScore, setFastMoneyScore, showAnswers, setShowAnswers} = useFastMoney();
+    const {fastMoneyScore, setFastMoneyScore, showAnswers} = useFastMoney();
     const [answerHidden, setAnswerHidden] = useState(true);
     const [pointHidden, setPointHidden] = useState(true);
     const [playAnswer] = useSound(showAnswer, {volume: 1});
