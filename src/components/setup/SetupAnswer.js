@@ -1,7 +1,6 @@
 import styles from './SetupAnswer.module.css'
-import {useCustomGame} from "../../context/CustomGameContext";
 
-export default function SetupAnswer({allAnswers, allPoints, answer, setAnswers, points, setPoints, answerNum, rdNum}) {
+export default function SetupAnswer({allAnswers, allPoints, answer, setAnswers, points, setPoints, answerNum}) {
 
 
     function changeAnswer(e) {
