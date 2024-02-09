@@ -1,0 +1,9 @@
+.fmContainer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    width: 70%;
+    border: 2px solid white;
+    height: 100%;
+}
