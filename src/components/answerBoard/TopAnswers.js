@@ -4,7 +4,7 @@ import {useGame} from "../../context/GameContext";
 import EmptyAnswer from "./EmptyAnswer";
 
 
-function TopAnswers({rd}) {
+function TopAnswers({rd, multiplier}) {
     const {gameData} = useGame();
     const answers1 = gameData[rd].answers.slice(0, 4);
     const answers2 = gameData[rd].answers.slice(4, 8);
@@ -18,7 +18,10 @@ function TopAnswers({rd}) {
                             return <EmptyAnswer/>
                         } else return <HiddenAnswer answer={answer.answer}
                                                     points={answer.points}
-                                                    key={index}>{index + 1}
+                                                    rd={rd}
+                                                    multiplier={multiplier}
+                                                    key={index}>
+                            {index + 1}
                         </HiddenAnswer>
                     })}
                 </div>
@@ -30,7 +33,10 @@ function TopAnswers({rd}) {
                             return <EmptyAnswer/>
                         } else return <HiddenAnswer answer={answer.answer}
                                                     points={answer.points}
-                                                    key={index}>{index + 5}
+                                                    rd={rd}
+                                                    multiplier={multiplier}
+                                                    key={index}>
+                            {index + 5}
                         </HiddenAnswer>
                     })}
                 </div>
