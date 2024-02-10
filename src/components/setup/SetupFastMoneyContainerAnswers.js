@@ -15,7 +15,9 @@ export default function SetupFastMoneyContainerAnswers({questionNum}) {
             fastMoneyPoints5, setFastMoneyPoints5,
     } = useCustomGame();
     return (
-        <div className={styles.fmContainer}>
+        <>
+        <div className={`${styles.fmContainer} `}>
+            <h2>Answers</h2>
             {questionNum === 1 &&
                 <SetupFastMoneyAnswers answers={fastMoneyAnswers1} setAnswers={setFastMoneyAnswers1} points={fastMoneyPoints1} setPoints={setFastMoneyPoints1}/>}
             {questionNum === 2 &&
@@ -27,5 +29,6 @@ export default function SetupFastMoneyContainerAnswers({questionNum}) {
             {questionNum === 5 &&
                 <SetupFastMoneyAnswers answers={fastMoneyAnswers5} setAnswers={setFastMoneyAnswers5} points={fastMoneyPoints5} setPoints={setFastMoneyPoints5}/>}
         </div>
+        </>
     )
 }
