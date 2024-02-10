@@ -4,13 +4,23 @@ import styles from './HiddenAnswer.module.css';
 import useSound from "use-sound";
 import correct from '../../audio/family-feud-good-answer.mp3'
 
-function HiddenAnswer({children, answer, points}) {
+function HiddenAnswer({children, answer, points, rd, multiplier}) {
     const [hide, setHide] = useState(true);
     const {roundScore, setRoundScore} = useGame();
     const [play] = useSound(correct, {volume: 1});
     function showAnswer() {
         setHide(false);
+        console.log(rd)
+        if (rd === 2){
+            setRoundScore(roundScore + Number(points * multiplier));
+        } else if (rd === 3){
+            setRoundScore(roundScore + Number(points * multiplier));
+        } else if (rd === 4){
+            setRoundScore(300);
+        } else {
         setRoundScore(roundScore + Number(points));
+        }
+
         play();
     }
 
