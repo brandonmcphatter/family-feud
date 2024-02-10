@@ -4,21 +4,21 @@ const CustomGameContext = createContext(undefined);
 
 function CustomGameProvider({children}) {
     // QUESTIONS
-    const [customQuestions, setCustomQuestions] = useState(['q1', 'q2', 'q3', 'q4', 'sd']);
+    const [customQuestions, setCustomQuestions] = useState(['', '', '', '', '']);
     // ROUND 1 ANSWERS AND POINTS
-    const [round1Answers, setRound1Answers] = useState(['a', 'b', 'c', 'd', '', '', '', '']);
-    const [round1Points, setRound1Points] = useState([10, 20, 30, 40, 0, 0, 0, 0]);
+    const [round1Answers, setRound1Answers] = useState(['', '', '', '', '', '', '', '', ]);
+    const [round1Points, setRound1Points] = useState([0,0,0,0,0,0,0,0,]);
     // ROUND 2 ANSWERS AND POINTS
-    const [round2Answers, setRound2Answers] = useState(['', '', '', '', '', '', '', '']);
-    const [round2Points, setRound2Points] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
+    const [round2Answers, setRound2Answers] = useState(['', '', '', '', '', '', '', '', ]);
+    const [round2Points, setRound2Points] = useState([0,0,0,0,0,0,0,0,]);
     // ROUND 3 ANSWERS AND POINTS
-    const [round3Answers, setRound3Answers] = useState(['', '', '', '', '', '', '', '']);
-    const [round3Points, setRound3Points] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
+    const [round3Answers, setRound3Answers] = useState(['', '', '', '', '', '', '', '', ]);
+    const [round3Points, setRound3Points] = useState([0,0,0,0,0,0,0,0,]);
     // ROUND 4 ANSWERS AND POINTS
-    const [round4Answers, setRound4Answers] = useState(['', '', '', '', '', '', '', '']);
-    const [round4Points, setRound4Points] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
+    const [round4Answers, setRound4Answers] = useState(['', '', '', '', '', '', '', '', ]);
+    const [round4Points, setRound4Points] = useState([0,0,0,0,0,0,0,0,]);
     // SUDDEN DEATH ANSWER AND POINTS
-    const [suddenDeathAnswer, setSuddenDeathAnswer] = useState(['', '', '', '', '', '', '', '']);
+    const [suddenDeathAnswer, setSuddenDeathAnswer] = useState(['', '', '', '', '', '', '', '', ]);
     const [suddenDeathPoints, setSuddenDeathPoints] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
     // FAST MONEY QUESTIONS
     const [fastMoneyQuestions, setFastMoneyQuestions] = useState(['', '', '', '', '']);
@@ -28,11 +28,11 @@ function CustomGameProvider({children}) {
     const [fastMoneyAnswers3, setFastMoneyAnswers3] = useState(['', '', '', '', '']);
     const [fastMoneyAnswers4, setFastMoneyAnswers4] = useState(['', '', '', '', '']);
     const [fastMoneyAnswers5, setFastMoneyAnswers5] = useState(['', '', '', '', '']);
-    const [fastMoneyPoints1, setFastMoneyPoints1] = useState([0, 0, 0, 0, 0]);
-    const [fastMoneyPoints2, setFastMoneyPoints2] = useState([0, 0, 0, 0, 0]);
-    const [fastMoneyPoints3, setFastMoneyPoints3] = useState([0, 0, 0, 0, 0]);
-    const [fastMoneyPoints4, setFastMoneyPoints4] = useState([0, 0, 0, 0, 0]);
-    const [fastMoneyPoints5, setFastMoneyPoints5] = useState([0, 0, 0, 0, 0]);
+    const [fastMoneyPoints1, setFastMoneyPoints1] = useState([0,0,0,0,0]);
+    const [fastMoneyPoints2, setFastMoneyPoints2] = useState([0,0,0,0,0]);
+    const [fastMoneyPoints3, setFastMoneyPoints3] = useState([0,0,0,0,0]);
+    const [fastMoneyPoints4, setFastMoneyPoints4] = useState([0,0,0,0,0]);
+    const [fastMoneyPoints5, setFastMoneyPoints5] = useState([0,0,0,0,0]);
 
     // CUSTOM GAME DATA
 
