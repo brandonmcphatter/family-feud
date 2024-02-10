@@ -151,7 +151,7 @@ const suddenDeath = {
     answers: [
         {
             answer: 'Clock',
-            points: 300,
+            points: '',
         },
         {
             answer: '',
