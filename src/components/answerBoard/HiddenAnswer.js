@@ -10,7 +10,7 @@ function HiddenAnswer({children, answer, points}) {
     const [play] = useSound(correct, {volume: 1});
     function showAnswer() {
         setHide(false);
-        setRoundScore(roundScore + points);
+        setRoundScore(roundScore + Number(points));
         play();
     }
 
