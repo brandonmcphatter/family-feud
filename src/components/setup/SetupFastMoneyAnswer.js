@@ -13,21 +13,21 @@ export default function SetupFastMoneyAnswer({answer, setAnswer, points, setPoin
     function changePoints(e) {
         const newPoints = allPoints.map((p,i) => {
             if (i === answerNum) {
-                return e;
-            } else return p;
+                return Number(e);
+            } else return Number(p);
         })
         setPoints(newPoints);
     }
 
     return (
-        <div className={'d-flex'}>
-            <div className={'d-flex'}>
-                <label htmlFor="{'answer'}">A{key}:</label>
+        <div className={'d-flex  row'}>
+            <div className={'d-flex col-8'}>
+                <label className={''} htmlFor="{'answer '}">A{answerNum +1}:</label>
                 <input id={'answer'} type={'text'} value={answer} onChange={(e) => changeAnswer(e.target.value)}/>
             </div>
-            <div>
-                <label htmlFor="points">P{key}:</label>
-                <input id={'points'} type={"number"} value={points} onChange={(e) => changePoints(e.target.value)}/>
+            <div className={'d-flex col-3'}>
+                <label htmlFor="points">P{answerNum + 1}:</label>
+                <input className={'w-75'} id={'points'} type={"number"} value={points} onChange={(e) => changePoints(e.target.value)}/>
             </div>
         </div>
     )
