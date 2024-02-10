@@ -20,7 +20,7 @@ export default function FastMoney() {
     }
 
     return (
-        <div className={`${styles.fastMoney} animate__animated `}>
+        <div className={`${styles.fastMoney} pt-4 animate__animated `}>
             <div className={'pt-3 animate__animated animate__slideInDown animate__slow'}>
                 <AnswerArea>
                     <div className={'mt-5 animate__animated animate__fadeIn animate__slower'}>
