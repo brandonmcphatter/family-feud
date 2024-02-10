@@ -1,7 +1,12 @@
 .fmContainer {
-    border: 2px solid red;
+    background-color: #182828;
+    border: 5px solid royalblue;
+    border-radius: 15px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
     flex-direction: column;
-    gap: 10px;
+    gap: 50px;
     width: 30%;
 }
