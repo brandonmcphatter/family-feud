@@ -4,7 +4,6 @@ import HomeScreen from "./pages/HomeScreen"
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import SetupScreen from "./pages/SetupScreen";
 import AnswerBoard from "./pages/AnswerBoard";
-
 import GameScreen from "./pages/GameScreen";
 import WinScreen from "./pages/WinScreen";
 import FastMoney from "./pages/FastMoney";
