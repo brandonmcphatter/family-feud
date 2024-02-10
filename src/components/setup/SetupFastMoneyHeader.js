@@ -1,6 +1,6 @@
 export default function SetupFastMoneyHeader({num}) {
     return (
-        <div>Fast Money Setup - Question {num}</div>
+        <h1 className={'text-center mb-5'}>Fast Money Setup - Question {num}</h1>
 
     )
 }
