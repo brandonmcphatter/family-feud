@@ -3,7 +3,8 @@ import {useFastMoney} from "../../context/FastMoneyContext";
 import styles from './FastMoneyAnswerBlock.module.css'
 import useSound from "use-sound";
 import showAnswer from '../../audio/fast-money-answer-reveal-101soundboards.mp3'
-import showPoints from '../../audio/family-feud-good-answer.mp3'
+import showPoints from '../../audio/fastMoneyGoodAnswer.mp3'
+import showZero from '../../audio/fastMoneyZero.mp3'
 
 export default function FastMoneyAnswerBlock({answer, points}) {
     const {fastMoneyScore, setFastMoneyScore, showAnswers} = useFastMoney();
@@ -11,6 +12,7 @@ export default function FastMoneyAnswerBlock({answer, points}) {
     const [pointHidden, setPointHidden] = useState(true);
     const [playAnswer] = useSound(showAnswer, {volume: 1});
     const [playPoints] = useSound(showPoints, {volume: 1});
+    const [playZero] = useSound(showZero, {volume: 1});
 
     function showPlayerAnswer() {
         playAnswer();
@@ -18,7 +20,11 @@ export default function FastMoneyAnswerBlock({answer, points}) {
     }
 
     function showPointsForAnswer() {
-        playPoints();
+        if (points === 0) {
+            playZero();
+        } else {
+            playPoints();
+        }
         setPointHidden(false);
         setFastMoneyScore(fastMoneyScore + points);
     }
