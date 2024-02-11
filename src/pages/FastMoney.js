@@ -4,14 +4,17 @@ import FastMoneyToolbar from "../components/fastMoney/FastMoneyToolbar";
 import styles from './FastMoney.module.css'
 import {useNavigate} from "react-router";
 import {useFastMoney} from "../context/FastMoneyContext";
+import winOutro from '../audio/winnerOutro.mp3'
+import useSound from "use-sound";
 
 export default function FastMoney() {
     const {fastMoneyScore} = useFastMoney();
     const navigate = useNavigate();
+    const [playOutro] = useSound(winOutro, {volume: 1})
 
     function showWinner() {
-
         navigate('/game/final')
+        playOutro();
     }
 
     if (fastMoneyScore > 199) {
