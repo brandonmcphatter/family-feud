@@ -8,6 +8,7 @@ import GameScreen from "./pages/GameScreen";
 import WinScreen from "./pages/WinScreen";
 import FastMoney from "./pages/FastMoney";
 import ScoreScreen from "./pages/ScoreScreen";
+import GameAnswers from "./pages/GameAnswers";
 
 export default function App() {
 
@@ -16,6 +17,7 @@ export default function App() {
             <Routes>
                 <Route index element={<HomeScreen/>}/>
                 <Route path='setup' element={<SetupScreen/>}/>
+                <Route path={'answers'} element={<GameAnswers/>}/>
                 <Route path='game' element={<GameScreen/>}>
                     <Route index element={<Navigate replace to='scoreboard'/>}/>
                     <Route path='scoreboard' element={<ScoreScreen/>}/>
