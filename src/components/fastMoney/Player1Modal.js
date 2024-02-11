@@ -37,7 +37,6 @@ export default function Player1Modal() {
     return (
         <Modal show={p1Modal} onEscapeKeyDown={closeP1}>
             <Modal.Body style={{background: 'darkorange', color: 'white'}}>
-
                 <div className={'text-center fw-bolder display-6 mb-3'}>Fast Money - PLAYER 1</div>
                 <div className={'d-flex flex-column gap-4 mb-3'}>
                     <div className={' d-flex justify-content-center gap-1'} style={{height: '50px'}}>
