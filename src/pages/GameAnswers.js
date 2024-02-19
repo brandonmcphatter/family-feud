@@ -15,7 +15,6 @@ export default function GameAnswers() {
         return a.answers
     });
     const fastMoneyAnswersSpread = fastMoneyAnswers.split;
-    console.log(fastMoneyAnswersSpread)
 
     return (
         <div>
@@ -33,7 +32,7 @@ export default function GameAnswers() {
                 {r1Answers.map((a, i) => {
                     if (a.answer !== ''){
                         return <h3>Answer: {a.answer} - Points: {a.points}</h3>
-                    } else return;
+                    }
                 })}
             </div>
             <h2>Round 2</h2>
@@ -41,7 +40,7 @@ export default function GameAnswers() {
                 {r2Answers.map((a, i) => {
                     if (a.answer !== ''){
                         return <h3>Answer: {a.answer} - Points: {a.points}</h3>
-                    } else return;
+                    }
                 })}
             </div>
             <h2>Round 3</h2>
@@ -49,7 +48,7 @@ export default function GameAnswers() {
                 {r3Answers.map((a, i) => {
                     if (a.answer !== ''){
                         return <h3>Answer: {a.answer} - Points: {a.points}</h3>
-                    } else return;
+                    }
                 })}
             </div>
             <h2>Round 4</h2>
@@ -57,7 +56,7 @@ export default function GameAnswers() {
                 {r4Answers.map((a, i) => {
                     if (a.answer !== ''){
                         return <h3>Answer: {a.answer} - Points: {a.points}</h3>
-                    } else return;
+                    }
                 })}
             </div>
             <h2>Sudden Death</h2>
